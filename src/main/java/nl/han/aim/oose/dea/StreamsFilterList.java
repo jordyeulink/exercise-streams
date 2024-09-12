@@ -7,17 +7,17 @@ public class StreamsFilterList {
 
     List<String> filterStringsShorterThanThreeCharacters(List<String> input) {
         // TODO: implement
-        input.stream()
-                .filter(x -> x.length()<3)
+        return input.stream()
+                .filter(x -> x.length() < 3)
                 .collect(Collectors.toList());
-
-        return input;
     }
 
 
     List<String> filterStringsThatContainOnlyNumerals(List<String> input) {
         // TODO: implement
 
-        return input;
+        return input.stream()
+                .filter(x -> x.matches("\\d+"))
+                .collect(Collectors.toList());
     }
 }

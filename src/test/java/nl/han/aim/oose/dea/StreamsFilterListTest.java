@@ -32,13 +32,13 @@ public class StreamsFilterListTest {
     @Test
     void filterStringsThatContainOnlyNumerals_WithNonNumeralStrings_ShouldRemoveNonNumeralStrings() {
         // Arrange
-        List<String> input = asList("Welcome", "to", "Java", "12", "Streams");
+        List<String> input = asList("Welcome", "to", "Java", "12","14","Streams");
 
         // Act
         List<String> filteredStrings = sut.filterStringsThatContainOnlyNumerals(input);
 
         // Assert
-        assertThat(filteredStrings, contains("12"));
+        assertThat(filteredStrings, contains("12","14"));
     }
 
 }
